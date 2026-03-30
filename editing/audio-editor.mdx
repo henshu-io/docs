@@ -1,0 +1,108 @@
+---
+title: "Using the Audio Editor"
+description: "How to use Henshu's audio editor — navigate the editor layout, work with sections and audio blocks, make cuts and mutes, and preview your episode."
+sidebarTitle: "Audio Editor"
+keywords: ["editor", "waveform", "audio editor", "cut", "mute", "section", "audio block", "break", "timeline", "preview", "playback", "trim", "edit"]
+---
+
+# Using the Audio Editor
+
+The audio editor is where you arrange, cut, and preview your podcast episode. It provides a waveform-based interface for visual editing, with sections and audio blocks organized in a timeline.
+
+## Overview
+
+When you open an episode, you enter the editor. The editor shows your episode's structure — [sections](/getting-started/concepts#sections) containing [audio blocks](/getting-started/concepts#audio-blocks) — with waveform visualizations for each audio file. You can rearrange content, make cuts and mutes, and preview your episode before generating the final file.
+
+## Editor Layout
+
+The editor consists of several areas:
+
+- **Activity Bar** — the left-hand sidebar with navigation icons
+- **Sidebar** — shows episode details and section list
+- **Main Area** — the waveform timeline where you edit audio
+- **Playback Controls** — play, pause, and seek through your episode
+
+[screenshot: Full editor layout with areas labeled]
+
+## How do I work with sections?
+
+Sections divide your episode into logical parts (intro, main content, outro, etc.).
+
+**Adding a section:**
+1. Click **Add Section** below the existing sections
+2. The new section appears at the end of the episode
+3. Click the section title to rename it
+
+**Reordering sections:**
+Drag sections to rearrange the order they play in your episode.
+
+**Renaming a section:**
+Click on the section title to edit it inline.
+
+[screenshot: Section list with Add Section button]
+
+## How do I work with audio blocks?
+
+Audio blocks hold your audio content within a section.
+
+**Adding an audio block:**
+- Upload a new file (see [Uploading Audio](/creating/uploading-audio))
+- Or click **Add Audio Block** within a section
+
+**Adding a break block:**
+Click **Add Break** to insert a silence block. Set the duration for how long the pause should be.
+
+**Reordering blocks:**
+Drag audio blocks to rearrange them within a section. Blocks play sequentially in order.
+
+[screenshot: Section with audio blocks and a break block]
+
+## How do I cut or mute audio?
+
+Select a region on the waveform to apply edits:
+
+**Making a cut:**
+1. Click and drag on the waveform to select a region
+2. Click **Cut** (or use the keyboard shortcut)
+3. The selected region is removed — audio before and after plays seamlessly
+
+**Making a mute:**
+1. Click and drag on the waveform to select a region
+2. Click **Mute** (or use the keyboard shortcut)
+3. The selected region is silenced — the duration is preserved but no sound plays
+
+You can undo cuts and mutes at any time. For an alternative editing approach, see [Editing with Transcripts](/editing/transcripts).
+
+[screenshot: Waveform with a selected region showing cut/mute options]
+
+## How do I preview my episode?
+
+Use the playback controls to preview your episode:
+
+- **Play/Pause** — start or stop playback
+- **Seek** — click anywhere on the timeline to jump to that position
+- The playback respects all your edits (cuts, mutes) and plays sections and blocks in order
+
+The preview plays your episode as it will sound after generation, including any [background music](/editing/background-music) you've assigned.
+
+## Common Issues
+
+**Audio isn't playing when I press play**
+Make sure your browser tab isn't muted. Check that you have audio blocks with content in at least one section.
+
+**Waveform isn't loading**
+The waveform generates after upload. If it's still missing after a minute, try refreshing the page. The audio file itself is safely stored.
+
+**I hear unexpected silence between sections**
+Check for empty audio blocks or break blocks with long durations. Also check that audio blocks are in the correct order within each section.
+
+**I accidentally made a cut — how do I undo?**
+Use undo (Ctrl/Cmd+Z) to reverse your last edit.
+
+## Related
+
+- [Uploading Audio](/creating/uploading-audio) — get audio into your episode
+- [Editing with Transcripts](/editing/transcripts) — text-based alternative to waveform editing
+- [AI Audio Enhancement](/editing/ai-enhancement) — improve audio quality
+- [Generating Your Episode](/publishing/generating) — create the final file from your edits
+- [Concepts & Terminology](/getting-started/concepts#cuts-and-mutes) — definitions of cuts and mutes

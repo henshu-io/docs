@@ -1,0 +1,90 @@
+---
+title: "Adding Background Music"
+description: "How to add background music (BGM) to your podcast sections in Henshu, including volume control, ducking, fade settings, and smart looping."
+sidebarTitle: "Background Music"
+keywords: ["BGM", "background music", "music", "ducking", "smart loop", "fade", "volume", "loop", "library", "audio", "section"]
+---
+
+# Adding Background Music
+
+Henshu's [BGM](/getting-started/concepts#bgm-background-music) (background music) system lets you add music to individual sections of your episode, with controls for volume, [ducking](/getting-started/concepts#ducking), fades, and [looping](/getting-started/concepts#smart-loop).
+
+## Overview
+
+Background music is assigned per [section](/getting-started/concepts#sections), not per episode. This means your intro can have upbeat music, your interview section can have subtle ambient music, and your outro can have different music entirely. The music library is linked to your [show](/creating/shows), so tracks you add are available across all episodes in that show.
+
+## How do I add background music to a section?
+
+1. In the editor, select the section you want to add music to
+2. Open the **BGM panel** from the sidebar
+3. Browse the music library — you'll see tracks available for your show
+4. Click a track to assign it to the section
+5. The music is now linked to that section and will play underneath your voice audio
+
+[screenshot: BGM panel showing music library and a track assigned to a section]
+
+## How do I adjust BGM settings?
+
+Once a track is assigned to a section, you can configure:
+
+### Volume
+
+Set the music volume relative to your voice audio:
+- **Normal** — standard background level
+- **Louder** — music is more prominent
+- **Quieter** — music sits further back behind voice
+
+### Ducking
+
+When **ducking** is enabled, the music volume automatically dips when voice audio is playing, then rises during pauses. This ensures your voice is always clearly audible over the music without manual volume adjustments.
+
+### Fade In / Fade Out
+
+Set the duration (in seconds) for the music to fade in at the start of the section and fade out at the end. This creates smooth transitions instead of abrupt starts and stops.
+
+### Play Mode
+
+Choose how the music behaves when the section is longer than the track:
+
+| Mode | Behavior |
+|------|----------|
+| **Once** | Play the track once and stop — silence for the rest of the section |
+| **Loop** | Restart from the beginning when the track ends |
+| **Smart Loop** | Crossfade at configured cue points for seamless, natural-sounding loops |
+
+[Smart loop](/getting-started/concepts#smart-loop) produces the most polished result for sections that are longer than the music track.
+
+[screenshot: BGM settings panel showing volume, ducking, fade, and play mode controls]
+
+## How do I remove BGM from a section?
+
+To remove background music from a section, open the BGM panel for that section and click **Remove** (or deselect the current track). The section will play without any background music.
+
+## Key Details
+
+- BGM is per-section, not per-episode — different sections can have different music
+- The music library is per-show — add tracks once and use them across episodes
+- BGM settings (volume, ducking, fades, play mode) are independent for each section
+- Background music is mixed into the final file when you [generate your episode](/publishing/generating)
+- BGM does not appear as a waveform in the main editor — it plays during preview and is included in the generated output
+
+## Common Issues
+
+**Music is too loud and drowning out my voice**
+Enable **ducking** to automatically lower the music when voice is playing. You can also set the volume to **Quieter** for a more subtle background level.
+
+**Music isn't looping as expected**
+Check the **play mode** setting. If set to "Once," the music stops after one play. Switch to "Loop" or "Smart Loop" for continuous music throughout the section.
+
+**Ducking doesn't seem to be working**
+Ducking activates when voice audio is detected. If your section has mostly silence or very quiet speech, ducking may not trigger noticeably. Make sure ducking is toggled on in the BGM settings for that section.
+
+**I don't see any music in the library**
+The BGM library is linked to your show. Browse the available tracks in the library panel. If you're looking for a specific track, it may need to be added to your show's library first.
+
+## Related
+
+- [Using the Audio Editor](/editing/audio-editor) — the editor where you assign BGM
+- [Creating a Show](/creating/shows) — shows have their own BGM libraries
+- [Generating Your Episode](/publishing/generating) — BGM is mixed into the final output
+- [Concepts & Terminology](/getting-started/concepts#bgm-background-music) — definitions of BGM, ducking, and smart loop
