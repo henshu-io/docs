@@ -1,0 +1,102 @@
+---
+title: "Concepts & Terminology"
+description: "Key concepts and terminology used in Henshu — shows, episodes, sections, audio blocks, segments, BGM, enhancement, transcription, and more."
+sidebarTitle: "Concepts"
+keywords: ["concepts", "terminology", "glossary", "show", "episode", "section", "audio block", "segment", "BGM", "background music", "enhancement", "transcription", "generate", "export"]
+---
+
+# Concepts & Terminology
+
+This page defines the key concepts and terms used throughout Henshu. If you encounter an unfamiliar term anywhere in the docs, you'll find its definition here.
+
+## The Episode Hierarchy
+
+Henshu organizes your podcast content in a hierarchy. Understanding this structure helps you work effectively in the editor.
+
+```
+Show → Episode → Section → Audio Block → Segment → Audio File
+```
+
+### Shows
+
+A **show** is your podcast series — the top-level container for all your episodes. Think of it as "My Interview Podcast" or "Weekly Tech News." You create shows from the dashboard, and each show has its own settings and background music library.
+
+### Episodes
+
+An **episode** is a single installment of your show. Each episode contains one or more sections that you arrange and edit to create your final podcast file. Episodes have a status: **editing** (in progress) or **generated** (final file created).
+
+### Sections
+
+A **section** is a structural division within an episode — for example, "Intro," "Interview," or "Outro." Sections let you organize your episode into logical parts. Each section can have its own [background music (BGM)](/editing/background-music) assignment with independent volume, ducking, and fade settings.
+
+### Audio Blocks
+
+An **audio block** is a container within a section that holds audio content. There are two types:
+
+- **Audio blocks** — contain your voice recordings or other audio files
+- **Break blocks** — represent silence or pauses with a set duration
+
+Audio blocks within a section play **sequentially** — one after another in the timeline.
+
+### Segments
+
+A **segment** is a reference to a specific portion of an audio file within an audio block. Segments define which part of the original recording to play, including any [cuts or mutes](#cuts-and-mutes) you've made. Multiple segments within the same audio block play **in parallel** (layered together).
+
+### Audio Files
+
+An **audio file** is your original uploaded recording. When you upload a file to Henshu, it gets processed into a standard format and a waveform is generated for visual editing. One audio file can be referenced by multiple segments across different episodes.
+
+## Editing Concepts
+
+### Cuts and Mutes
+
+Also known as: edits, trims
+
+- A **cut** removes a portion of audio from playback — the audio before and after the cut plays seamlessly
+- A **mute** silences a portion of audio — the duration is preserved but the sound is replaced with silence
+
+You can create cuts and mutes either by selecting regions on the [waveform editor](/editing/audio-editor) or by selecting text in the [transcript](/editing/transcripts).
+
+### Transcription
+
+Also known as: transcript
+
+**Transcription** is the process of converting your audio file into text using AI. Once transcribed, you can read your recording as text and make edits by selecting words — this is called [text-based editing](/editing/transcripts). Henshu uses AI-powered transcription with word-level timestamps so that text selections map precisely to audio regions.
+
+### Enhancement
+
+Also known as: audio cleanup, noise reduction
+
+**Enhancement** is Henshu's one-click [AI audio processing](/editing/ai-enhancement) that improves your recording quality. It includes noise reduction and volume leveling. Enhanced audio files are marked with a gold badge in the editor.
+
+## Music Concepts
+
+### BGM (Background Music)
+
+**BGM** stands for background music. Henshu provides a [music library](/editing/background-music) that you can browse and assign to individual sections of your episode. Each section can have its own BGM track with independent settings.
+
+### Ducking
+
+**Ducking** automatically lowers the background music volume when voice audio is playing, then brings it back up during pauses. This ensures your voice is always clearly audible over the music.
+
+### Smart Loop
+
+A **smart loop** is a BGM play mode that uses configured cue points to create seamless music loops with crossfade transitions. Unlike a basic loop (which restarts from the beginning), a smart loop crossfades at natural transition points in the music for a more polished sound.
+
+BGM play modes:
+- **Once** — play the track once and stop
+- **Loop** — repeat from the beginning when the track ends
+- **Smart loop** — crossfade loop using configured cue points
+
+## Publishing Concepts
+
+### Generate (Episode Generation)
+
+Also known as: export, finalize, render
+
+**Generating** an episode is the process of assembling all your sections, audio blocks, BGM, and edits into a single final audio file. This is the last step before you download and publish your podcast. See [Generating Your Episode](/publishing/generating) for details.
+
+## Related
+
+- [Your First Episode](/getting-started/first-episode) — walkthrough of the full workflow
+- [Plans & Quotas](/account/plans-and-quotas) — upload and transcription limits
