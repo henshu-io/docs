@@ -1,0 +1,67 @@
+---
+title: "Generating Your Episode"
+description: "How to generate your podcast episode in Henshu — assembling sections, audio blocks, edits, and background music into a final audio file."
+sidebarTitle: "Generating"
+keywords: ["generate", "export", "render", "finalize", "assemble", "episode", "output", "processing", "final file"]
+---
+
+# Generating Your Episode
+
+[Generating](/getting-started/concepts#generate-episode-generation) is the final step — Henshu assembles all your sections, audio blocks, edits, and background music into a single polished audio file.
+
+## Overview
+
+When you generate an episode, Henshu takes everything you've arranged in the editor and produces a final output file. This includes:
+
+- All sections in order
+- All audio blocks with your cuts and mutes applied
+- Break blocks rendered as silence
+- Background music mixed in per section (with volume, ducking, and fade settings applied)
+- Enhanced audio used where available
+
+The result is a single audio file ready for publishing.
+
+## How do I generate my episode?
+
+1. Make sure your episode is arranged the way you want — check sections, audio blocks, and BGM assignments
+2. Click **Generate Episode**
+3. Wait for processing to complete — you'll see a progress indicator
+
+[screenshot: Generate Episode button in the editor]
+
+Processing time depends on your episode's total duration and complexity (number of sections, BGM tracks, etc.). Most episodes generate within a few minutes.
+
+## What gets included in the generated file?
+
+| Included | Not included |
+|----------|-------------|
+| All sections in their current order | Deleted audio (cuts are applied) |
+| All audio blocks within each section | Muted regions (silence replaces the audio) |
+| Break blocks (rendered as silence) | Unused audio files not placed in blocks |
+| Background music with all settings | |
+| AI-enhanced audio (if enhanced) | |
+
+## Key Details
+
+- Generation runs in the cloud — you can close the browser and come back later
+- You can re-generate after making changes; the previous generated file is replaced
+- Generation time depends on episode duration and complexity (sections, BGM, enhancements)
+- Only audio placed in audio blocks within sections is included — files sitting in the upload area but not placed in a block are excluded
+
+## Common Issues
+
+**Generation seems stuck or is taking a long time**
+Longer episodes with multiple sections and BGM tracks take more processing time. If generation seems stuck for more than 15 minutes, try refreshing the page. The generation process continues in the cloud even if you close the browser.
+
+**Missing audio in the generated file**
+Check that your audio files are placed in audio blocks within sections. Audio files that are uploaded but not placed in any audio block won't be included in the generated output.
+
+**Background music isn't in the generated file**
+Verify that BGM is assigned to the section(s) in the BGM panel. Also check that the play mode, volume, and fade settings are configured. Preview your episode before generating to confirm the music sounds right.
+
+## Related
+
+- [Downloading & Sharing](/publishing/downloading) — get your generated file
+- [Using the Audio Editor](/editing/audio-editor) — arrange your episode before generating
+- [Adding Background Music](/editing/background-music) — BGM settings affect the generated output
+- [Concepts & Terminology](/getting-started/concepts#generate-episode-generation) — definition of generation
