@@ -1,0 +1,71 @@
+---
+title: "Uploading Audio"
+description: "How to upload audio files to your Henshu episode — supported formats, the upload process, and what happens after upload."
+sidebarTitle: "Uploading Audio"
+keywords: ["upload", "audio", "recording", "file", "drag and drop", "format", "wav", "mp3", "processing", "waveform", "quota"]
+---
+
+# Uploading Audio
+
+Upload your audio recordings to an episode to start editing. Henshu processes uploaded files automatically — converting them to a standard format and generating a waveform for visual editing.
+
+## Overview
+
+You upload audio files from within the episode editor. Files can be added via drag-and-drop or a file picker. After upload, Henshu processes each file in the background: it converts the audio to a standard format (for consistent editing) and generates a waveform visualization.
+
+## How do I upload audio?
+
+1. Open an episode in the editor
+2. Either **drag and drop** audio files into the editor, or click the **Upload** button and select files from your computer
+3. Your files begin uploading — you'll see a progress indicator
+4. Once uploaded, Henshu processes each file (this takes a few seconds)
+5. A waveform appears when processing is complete, and the file is ready to edit
+
+[screenshot: Upload area in the editor with drag-and-drop zone]
+
+You can upload multiple files at once. Large files are automatically handled with multipart upload.
+
+## What happens after upload?
+
+When you upload a file, Henshu:
+
+1. **Uploads** the file to cloud storage
+2. **Converts** it to a standard audio format (48kHz, mono) for consistent editing
+3. **Generates a waveform** so you can see the audio visually in the editor
+4. **Creates an audio block** containing your file in the current section
+
+You can start editing as soon as the waveform appears.
+
+## Supported formats
+
+Henshu accepts common audio formats including WAV, MP3, M4A, AAC, FLAC, and OGG. Files are converted to a standard format during processing, so the original format doesn't affect editing quality.
+
+## Key Details
+
+- Uploaded files are placed into the currently selected section as new audio blocks
+- You can upload while other files are still processing
+- Original files are preserved — processing creates a working copy
+
+<Note>
+  **Free plan limit:** Your account has a lifetime upload quota. To check your remaining quota or learn about plan limits, see [Plans & Quotas](/account/plans-and-quotas).
+</Note>
+
+## Common Issues
+
+**Upload seems stuck or isn't progressing**
+Check your internet connection. Very large files take longer to upload. If the upload fails, try again — Henshu will resume from where it left off for large files.
+
+**"Quota exceeded" error**
+You've reached your plan's upload limit. See [Plans & Quotas](/account/plans-and-quotas) for details on your plan's limits and how to upgrade.
+
+**My file format isn't accepted**
+Make sure your file is a supported audio format (WAV, MP3, M4A, AAC, FLAC, OGG). Video files and non-audio formats are not supported.
+
+**Waveform isn't appearing after upload**
+Processing can take a few seconds depending on file size. If the waveform doesn't appear after a minute, try refreshing the page. Your file is safely stored and processing will continue.
+
+## Related
+
+- [Using the Audio Editor](/editing/audio-editor) — edit your uploaded audio
+- [Creating an Episode](/creating/episodes) — set up an episode before uploading
+- [Plans & Quotas](/account/plans-and-quotas) — upload limits for your plan
