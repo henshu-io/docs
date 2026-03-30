@@ -1,6 +1,6 @@
 # Henshu User Manual Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** Execute this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking. Each task should be committed independently. Verify with `mint dev` between tasks.
 
 **Goal:** Build the complete Henshu.io user manual — 15 MDX pages covering onboarding, audio editing, publishing, and account management.
 
@@ -66,6 +66,14 @@ All files at repo root (not in a `docs/` subdirectory).
 - Delete: `api-reference/` directory
 - Delete: `snippets/snippet-intro.mdx`
 - Delete: `images/checks-passed.png`, `images/hero-dark.png`, `images/hero-light.png`
+
+- [ ] **Step 0: Verify clean working tree**
+
+```bash
+git status
+```
+
+Expected: no uncommitted changes to tracked files. If there are uncommitted changes, stash or commit them before proceeding. Untracked files (like `.claude/`, `.agents/`) are fine.
 
 - [ ] **Step 1: Delete all starter content files**
 
@@ -193,9 +201,14 @@ Overwrite `docs.json` with:
 
 **Notes on values:**
 - Colors are Tailwind violet-500 (`#8B5CF6`), violet-400 (`#A78BFA`), violet-600 (`#7C3AED`) — matching the Henshu brand
-- Logo files are kept as-is for now (replace with actual Henshu logos in a separate step)
 - Social links and support email — verify these are correct with the user; use placeholders for now
 - The `contextual` options are kept from the starter kit — they enable Mintlify's built-in LLM context features
+
+- [ ] **Step 2b: Replace logo files**
+
+Copy Henshu logos from the marketing site or brand assets into `logo/light.svg` and `logo/dark.svg`, replacing the Mintlify starter logos. Also replace `favicon.svg` with the Henshu favicon.
+
+If Henshu logo SVGs are not available locally, ask the user where to find them. Do not proceed with Mintlify placeholder logos in the final site.
 
 - [ ] **Step 3: Replace AGENTS.md with Henshu-specific guidance**
 
@@ -210,27 +223,29 @@ User-facing documentation for [Henshu.io](https://henshu.io), a podcast creation
 
 ## Commands
 
-- `mintlify dev` — preview locally at localhost:3000
-- `mintlify broken-links` — check for broken links
+- `mint dev` — preview locally at localhost:3000
+- `mint broken-links` — check for broken links
 
 ## Terminology
 
 Use these terms consistently across all pages:
 
-| Term | Definition | Never use |
-|------|-----------|-----------|
-| Show | A podcast series container | "project", "workspace" |
-| Episode | A single podcast episode within a show | "recording", "session" |
-| Section | A structural division of an episode (e.g., intro, interview, outro) | "chapter", "part" |
-| Audio block | A container for audio within a section. Types: AUDIO or BREAK | "clip", "track" |
-| Segment | A reference to a portion of an audio file within a block | "slice", "region" |
-| BGM | Background music assigned to a section | Spell out "background music" on first use, then "BGM" |
-| Enhancement | AI-powered audio cleanup (noise reduction, leveling) | "mastering", "processing" |
-| Transcription | AI-generated text transcript of an audio file | "caption", "subtitle" |
-| Text-based editing | Creating cuts/mutes by selecting text in a transcript | "transcript editing" |
-| Generate | Assemble an episode into a final audio file | "render", "export", "compile" |
-| Smart loop | BGM play mode that crossfades at configured cue points | "seamless loop" |
-| Ducking | Automatically lowering BGM volume when voice is detected | "sidechain" |
+| Preferred term | Definition | Aliases (include for LLM retrieval) | Never use |
+|---------------|-----------|--------------------------------------|-----------|
+| Show | A podcast series container | — | "project", "workspace" |
+| Episode | A single podcast episode within a show | — | "recording", "session" |
+| Section | A structural division of an episode (e.g., intro, interview, outro) | — | "chapter", "part" |
+| Audio block | A container for audio within a section. Types: AUDIO or BREAK | — | "clip", "track" |
+| Segment | A reference to a portion of an audio file within a block | — | "slice", "region" |
+| BGM | Background music assigned to a section. Spell out "background music" on first use, then "BGM" | background music | — |
+| Enhancement | AI-powered audio cleanup (noise reduction, leveling) | audio cleanup, noise reduction, mastering | — |
+| Transcription | AI-generated text transcript of an audio file | transcript | "caption", "subtitle" |
+| Text-based editing | Creating cuts/mutes by selecting text in a transcript | — | "transcript editing" |
+| Generate | Assemble an episode into a final audio file | export, finalize, render | "compile" |
+| Smart loop | BGM play mode that crossfades at configured cue points | — | "seamless loop" |
+| Ducking | Automatically lowering BGM volume when voice is detected | — | "sidechain" |
+
+**How to use aliases:** Use the preferred term in running text. Include aliases in page `keywords` frontmatter and in "also known as" lines on the Concepts page, so LLMs and search can find pages using either term.
 
 ## Style Rules
 
@@ -270,12 +285,15 @@ mkdir -p getting-started creating editing publishing account
 - [ ] **Step 5: Commit**
 
 ```bash
-git add -A
+git add docs.json AGENTS.md getting-started/ creating/ editing/ publishing/ account/
+git add index.mdx quickstart.mdx development.mdx essentials/ ai-tools/ api-reference/ snippets/snippet-intro.mdx images/checks-passed.png images/hero-dark.png images/hero-light.png
 git commit -m "chore: remove starter content and configure Henshu docs
 
 Replace Mintlify starter kit with Henshu brand config, navigation
 structure, and content guidelines. All placeholder content removed."
 ```
+
+Note: The second `git add` stages the deletions. Verify with `git status` before committing that only expected files are staged.
 
 ---
 
@@ -591,7 +609,7 @@ Now that you've created your first episode, explore the detailed guides for each
 - [ ] **Step 4: Verify pages render**
 
 ```bash
-mintlify dev
+mint dev
 ```
 
 Open http://localhost:3000 and verify:
@@ -655,6 +673,14 @@ Click on a show card in the dashboard to open it. You'll see all episodes belong
 - Each show has its own [BGM library](/editing/background-music) — music tracks you link to a show are available across all its episodes
 - Episodes belong to exactly one show and cannot be moved between shows
 - Show names can be changed after creation
+
+## Common Issues
+
+**I want to rename my show**
+Click on the show name in the dashboard or show settings to edit it.
+
+**I accidentally created the wrong show**
+You can delete a show if it has no episodes, or rename it to match your needs.
 
 ## Related
 
@@ -816,7 +842,7 @@ Processing can take a few seconds depending on file size. If the waveform doesn'
 - [ ] **Step 4: Verify pages render**
 
 ```bash
-mintlify dev
+mint dev
 ```
 
 Open http://localhost:3000 and verify the "Creating & Organizing" group renders with all three pages and cross-links work.
@@ -1194,7 +1220,7 @@ The BGM library is linked to your show. Browse the available tracks in the libra
 - [ ] **Step 5: Verify pages render**
 
 ```bash
-mintlify dev
+mint dev
 ```
 
 Open http://localhost:3000 and verify the "Editing" group renders with all four pages, cross-links work, and Note callouts render correctly.
@@ -1263,9 +1289,12 @@ Processing time depends on your episode's total duration and complexity (number 
 | Background music with all settings | |
 | AI-enhanced audio (if enhanced) | |
 
-## Can I re-generate after making changes?
+## Key Details
 
-Yes. You can continue editing an episode after generating it. Make your changes, then click **Generate Episode** again to create a new output file with the updates. The previous generated file is replaced.
+- Generation runs in the cloud — you can close the browser and come back later
+- You can re-generate after making changes; the previous generated file is replaced
+- Generation time depends on episode duration and complexity (sections, BGM, enhancements)
+- Only audio placed in audio blocks within sections is included — files sitting in the upload area but not placed in a block are excluded
 
 ## Common Issues
 
@@ -1325,9 +1354,11 @@ Once downloaded, you can:
 
 Henshu handles the editing and production — distribution is up to you and your podcast host.
 
-## Can I re-download a previous generation?
+## Key Details
 
-Yes. As long as the generated file exists, you can return to the episode and download it again.
+- You can re-download a previous generation at any time — the file stays available until you generate a new version
+- The generated file is a standard podcast-ready audio format compatible with all major hosting platforms
+- Henshu handles editing and production — distribution is up to you and your podcast host
 
 ## Common Issues
 
@@ -1346,7 +1377,7 @@ Henshu generates a standard podcast-ready audio format. If you need a specific f
 - [ ] **Step 3: Verify pages render**
 
 ```bash
-mintlify dev
+mint dev
 ```
 
 Verify the "Publishing" group renders with both pages.
@@ -1614,7 +1645,7 @@ See the Stripe customer portal for available billing options.
 - [ ] **Step 4: Verify pages render**
 
 ```bash
-mintlify dev
+mint dev
 ```
 
 Verify the "Account" group renders with all three pages and the Note callouts on other pages link correctly to plans-and-quotas.
@@ -1637,13 +1668,14 @@ and Managing Your Subscription pages."
 - Verify: all `.mdx` files for broken cross-links
 - Modify: any files with broken links
 
-- [ ] **Step 1: Run Mintlify broken link checker**
+- [ ] **Step 1: Run Mintlify validation and broken link checker**
 
 ```bash
-mintlify broken-links
+mint validate
+mint broken-links
 ```
 
-Fix any broken links reported. Common issues to check:
+Fix any validation errors or broken links reported. Common issues to check:
 - All `href` paths in `<Card>` components match actual file paths (without `.mdx` extension)
 - All markdown links like `[text](/path)` point to valid pages
 - Anchor links like `#section-name` match actual heading slugs in the target page
@@ -1651,7 +1683,7 @@ Fix any broken links reported. Common issues to check:
 - [ ] **Step 2: Verify full navigation**
 
 ```bash
-mintlify dev
+mint dev
 ```
 
 Open http://localhost:3000 and manually verify:
@@ -1670,12 +1702,14 @@ Apply fixes to any broken links, rendering issues, or navigation problems found 
 
 - [ ] **Step 4: Commit if any fixes were needed**
 
+Stage only the specific files that were fixed, then commit:
+
 ```bash
-git add -A
+git add <fixed-files>
 git commit -m "docs: fix broken links and rendering issues"
 ```
 
-Only create this commit if changes were made.
+Only create this commit if changes were made. Use `git diff` to verify only intended changes are staged.
 
 - [ ] **Step 5: Final commit summary**
 
