@@ -224,6 +224,7 @@ User-facing documentation for [Henshu.io](https://henshu.io), a podcast creation
 ## Commands
 
 - `mint dev` — preview locally at localhost:3000
+- `mint validate` — validate docs.json config and page structure
 - `mint broken-links` — check for broken links
 
 ## Terminology
@@ -316,7 +317,9 @@ keywords: ["henshu", "podcast", "audio editing", "getting started", "overview"]
 
 # Welcome to Henshu
 
-Henshu is a podcast creation platform that helps you edit audio, enhance it with AI, add background music, and generate polished podcast episodes — all in your browser.
+## Overview
+
+Henshu is a podcast creation platform that helps you edit audio, enhance it with AI, add background music, and generate polished podcast episodes — all in your browser. This page introduces what Henshu does and how the workflow fits together.
 
 ## What can you do with Henshu?
 
@@ -350,6 +353,12 @@ The typical workflow in Henshu follows these steps:
     Follow a step-by-step walkthrough from creating a show to downloading your finished episode.
   </Card>
 </CardGroup>
+
+## Related
+
+- [Concepts & Terminology](/getting-started/concepts) — definitions of all Henshu-specific terms
+- [Your First Episode](/getting-started/first-episode) — step-by-step walkthrough
+- [Plans & Quotas](/account/plans-and-quotas) — understand your plan's limits
 ```
 
 - [ ] **Step 2: Create getting-started/concepts.mdx**
@@ -596,9 +605,21 @@ Once generation is complete:
 
 For more details, see [Downloading & Sharing](/publishing/downloading).
 
-## What's next?
+## Key Details
 
-Now that you've created your first episode, explore the detailed guides for each feature:
+- Steps 5–7 (transcription, enhancement, BGM) are optional — you can generate an episode with just raw uploaded audio
+- You can return to any step and make changes after generating — then re-generate to get an updated file
+- Each step links to a detailed feature page for deeper guidance
+
+## Common Issues
+
+**I'm not sure what order to do things in**
+Follow the steps on this page in order. The only truly required steps are: create a show, create an episode, upload audio, and generate. Everything else is optional enhancement.
+
+**My episode sounds different from what I expected**
+Preview your episode in the editor before generating. The preview plays your episode as it will sound in the final file, including cuts, mutes, and background music.
+
+## Related
 
 - [Using the Audio Editor](/editing/audio-editor) — master the waveform editor
 - [Editing with Transcripts](/editing/transcripts) — text-based editing workflow
@@ -1711,19 +1732,21 @@ git commit -m "docs: fix broken links and rendering issues"
 
 Only create this commit if changes were made. Use `git diff` to verify only intended changes are staged.
 
-- [ ] **Step 5: Final commit summary**
+- [ ] **Step 5: Final verification**
 
-Verify the full commit history for this work:
+Verify all milestones are met:
 
 ```bash
 git log --oneline -10
 ```
 
-Expected commits (oldest to newest):
-1. `chore: remove starter content and configure Henshu docs`
-2. `docs: add Getting Started pages`
-3. `docs: add Creating & Organizing pages`
-4. `docs: add Editing pages`
-5. `docs: add Publishing pages`
-6. `docs: add Account pages`
-7. (optional) `docs: fix broken links and rendering issues`
+**Expected milestones** (each should have at least one commit):
+- [ ] Starter content removed and docs.json + AGENTS.md configured
+- [ ] Getting Started pages exist (3 files in `getting-started/`)
+- [ ] Creating & Organizing pages exist (3 files in `creating/`)
+- [ ] Editing pages exist (4 files in `editing/`)
+- [ ] Publishing pages exist (2 files in `publishing/`)
+- [ ] Account pages exist (3 files in `account/`)
+- [ ] `mint validate` and `mint broken-links` pass with no errors
+
+The exact number of commits may vary (fix commits, combined tasks, etc.). What matters is that all 15 pages are committed, the config is correct, and validation passes.
