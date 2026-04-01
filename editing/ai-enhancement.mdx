@@ -1,57 +1,69 @@
 ---
 title: "AI Audio Enhancement"
-description: "How to use Henshu's AI-powered audio enhancement to automatically clean up your recordings with noise reduction and volume leveling."
+description: "How Henshu's AI enhancement works. It runs automatically on upload, you toggle it on or off per audio block, and it's designed for voice recordings."
 sidebarTitle: "AI Enhancement"
-keywords: ["enhancement", "enhance", "AI", "noise reduction", "volume leveling", "audio cleanup", "mastering", "audio quality", "one-click"]
+keywords: ["enhancement", "enhance", "AI", "noise reduction", "volume leveling", "audio cleanup", "mouth noise", "breath removal", "audio quality", "toggle"]
 ---
 
-Henshu's AI [enhancement](/getting-started/concepts#enhancement) automatically cleans up your audio recordings with noise reduction and volume leveling in a single click.
+Henshu automatically enhances your audio when you upload it. The enhancement pipeline is designed for voice recordings and includes noise reduction, volume leveling, and mouth noise removal.
 
 ## Overview
 
-Raw podcast recordings often have background noise, inconsistent volume levels, or other quality issues. Enhancement processes your audio through an AI pipeline that addresses these problems automatically. The result is a cleaner, more professional-sounding recording.
+When you upload an audio file, Henshu runs it through an AI enhancement pipeline in the background. Both the original and enhanced versions are kept. You don't need to trigger enhancement manually; it happens automatically.
 
-## How do I enhance an audio file?
+In the editor, you choose whether to use the enhanced or original version on a per-audio-block basis. The same audio file can appear in multiple audio blocks, with enhancement turned on in one and off in another.
 
-1. In the editor, select the audio file you want to enhance
-2. Click **Enhance**
-3. Wait for processing to complete. The file will show a gold badge when done
+## How do I toggle enhancement?
 
-[screenshot: Audio file with Enhance button, and another file showing the gold "Enhanced" badge]
+Each audio block has an enhancement toggle:
 
-Enhancement runs in the background. You can continue editing while it processes.
+- **On** (default): uses the enhanced version of the audio
+- **Off**: uses the original, unprocessed version
+
+[screenshot: Audio block showing the enhancement toggle]
+
+The toggle is per audio block, not per file. So if the same recording appears in two different blocks, you can enable enhancement in one and disable it in the other.
 
 ## What does enhancement do?
 
-Enhancement applies two main improvements:
+The pipeline runs three processing stages on your audio:
 
-- **Noise reduction:** removes background noise, hum, and environmental sounds
-- **Volume leveling:** normalizes audio levels so quiet and loud parts are more consistent
+1. **Noise reduction**: removes background noise, hum, and environmental sounds using a deep learning model (DeepFilterNet)
+2. **Mouth noise removal**: detects and reduces breaths, lip smacks, and mouth clicks
+3. **Volume leveling**: normalizes loudness levels with adaptive EQ and compression so your audio lands in a consistent range
 
-The enhanced version replaces the working copy used for editing and generation. Your original upload is always preserved.
+Your original upload is always preserved. Enhancement creates a separate processed version.
 
-## Key Details
+## When should I turn enhancement off?
 
-- Enhancement is a one-click operation with no manual settings to configure
-- Processing time depends on file length; most files complete within a minute
-- Enhanced files show a gold badge in the editor so you can tell them apart
-- You can enhance a file before or after making cuts and mutes. Enhancement applies to the audio itself, not to your edits
-- Enhancement is available for individual audio files, not entire episodes at once
+Enhancement is designed for voice recordings. For non-voice audio like music, jingles, or sound effects, turn it off. The voice-focused processing can leave audible artifacts on non-speech content.
+
+Some signs you should toggle enhancement off for a block:
+- The audio is music or a jingle, not speech
+- You hear artifacts or distortion in the enhanced version
+- The original already sounds clean and doesn't need processing
+
+## Important details
+
+- Enhancement runs automatically when you upload a file. There's no button to click.
+- Both versions (original and enhanced) are stored. You can switch between them at any time.
+- The toggle is per audio block. The same file can have enhancement on in one block and off in another.
+- Processing time depends on file length. Most files finish within a minute or two.
+- Enhanced files show a gold badge in the editor.
 
 ## Common Issues
 
-**Enhancement is taking a long time**
-Longer audio files take more processing time. Files over 30 minutes may take several minutes. The processing happens in the cloud, so you can continue editing other files while waiting.
+**Enhancement is still processing**
+Longer audio files take more time. Files over 30 minutes may take several minutes. Processing happens in the cloud, so you can keep editing while it runs.
 
-**The enhanced audio doesn't sound as good as expected**
-Enhancement works best on voice recordings. If your audio has very heavy distortion or extreme noise, the AI may not be able to fully clean it up. In most cases, enhancement significantly improves standard podcast recordings.
+**The enhanced audio sounds worse than the original**
+This usually means the audio isn't a voice recording. Turn enhancement off for that block. Music, jingles, and sound effects don't benefit from voice-focused processing.
 
-**Enhancement failed**
-If enhancement fails, try again. If it continues to fail, the audio file may have an issue that prevents processing. You can continue editing with the unenhanced version.
+**I want to compare the original and enhanced versions**
+Toggle enhancement on and off in the audio block to switch between the two versions and compare.
 
 ## Related
 
 - [Using the Audio Editor](/editing/audio-editor)
 - [Uploading Audio](/creating/uploading-audio)
 - [Generating Your Episode](/publishing/generating)
-- [Concepts & Terminology](/getting-started/concepts#enhancement)
