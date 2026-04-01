@@ -1,11 +1,11 @@
 ---
 title: "AI Audio Enhancement"
-description: "How Henshu's AI enhancement works. It runs automatically on upload, you toggle it on or off per audio block, and it's designed for voice recordings."
+description: "How Henshu's AI enhancement works. It runs automatically on upload, includes noise reduction, mouth noise removal, tone optimization, and volume leveling. Toggle it on or off per audio block."
 sidebarTitle: "AI Enhancement"
 keywords: ["enhancement", "enhance", "AI", "noise reduction", "volume leveling", "audio cleanup", "mouth noise", "breath removal", "audio quality", "toggle"]
 ---
 
-Henshu automatically enhances your audio when you upload it. The enhancement pipeline is designed for voice recordings and includes noise reduction, volume leveling, and mouth noise removal.
+Henshu automatically enhances your audio when you upload it. The enhancement pipeline is designed for voice recordings and includes noise reduction, mouth noise removal, tone optimization, and volume leveling.
 
 ## Overview
 
@@ -28,9 +28,10 @@ The toggle is per audio block, not per file. So if the same recording appears in
 
 The pipeline runs three processing stages on your audio:
 
-1. **Noise reduction**: removes background noise, hum, and environmental sounds using a deep learning model (DeepFilterNet)
+1. **Noise reduction**: removes background noise, hum, and environmental sounds using a deep learning model
 2. **Mouth noise removal**: detects and reduces breaths, lip smacks, and mouth clicks
-3. **Volume leveling**: normalizes loudness levels with adaptive EQ and compression so your audio lands in a consistent range
+3. **Tone optimization**: applies adaptive EQ and de-essing to balance your voice's tone
+4. **Volume leveling**: normalizes loudness levels with compression so your audio lands in a consistent range
 
 Your original upload is always preserved. Enhancement creates a separate processed version.
 
