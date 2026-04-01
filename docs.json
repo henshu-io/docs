@@ -50,20 +50,7 @@
         ]
       }
     ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Henshu App",
-          "href": "https://app.henshu.io",
-          "icon": "microphone"
-        },
-        {
-          "anchor": "Website",
-          "href": "https://henshu.io",
-          "icon": "globe"
-        }
-      ]
-    }
+    "global": {}
   },
   "logo": {
     "light": "/logo/light.svg",
