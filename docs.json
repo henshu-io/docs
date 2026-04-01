@@ -22,16 +22,9 @@
             ]
           },
           {
-            "group": "Creating & Organizing",
-            "pages": [
-              "creating/shows",
-              "creating/episodes",
-              "creating/uploading-audio"
-            ]
-          },
-          {
             "group": "Editing",
             "pages": [
+              "creating/uploading-audio",
               "editing/audio-editor",
               "editing/transcripts",
               "editing/ai-enhancement",
