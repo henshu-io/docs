@@ -1,94 +1,45 @@
 ---
 title: "Concepts & Terminology"
-description: "Key concepts and terminology used in Henshu: block-based editing, sections, audio blocks, BGM, enhancement, transcription, show notes, and more."
+description: "The core building blocks of editing in Henshu: sections, audio blocks, and pause blocks."
 sidebarTitle: "Concepts"
-keywords: ["concepts", "terminology", "glossary", "block-based editing", "section", "audio block", "pause block", "pause", "BGM", "background music", "enhancement", "transcription", "generate", "export", "show notes", "chapters"]
+keywords: ["concepts", "terminology", "glossary", "block-based editing", "section", "audio block", "pause block", "pause", "structure"]
 ---
 
-This page defines the key concepts and terms used throughout Henshu. If you encounter an unfamiliar term anywhere in the docs, you'll find its definition here.
+Henshu organizes your episode as a stack of named blocks inside sections. This page explains what each one is and how they fit together.
 
-## Block-Based Editing
+## Sections
 
-Henshu uses a **block-based editing** model. Instead of editing audio on a single continuous timeline, you organize your episode as a stack of named blocks inside sections. This is the core idea behind Henshu's editor and shapes how everything else works.
+A **section** is a named container within an episode, for example "Intro," "Interview," or "Outro." Sections are the top-level building blocks of your episode. You can drag sections to reorder them, and each section can have its own [background music](/editing/background-music) with independent volume, ducking, and fade settings.
 
-In a traditional audio editor, a 45-minute interview is one long waveform. Rearranging means tedious cut-and-paste. In Henshu, the same interview is a set of named sections ("Intro," "Interview," "Outro"), each containing audio blocks you can drag to reorder, edit independently, and assign music to separately.
+Think of sections like paragraphs in a document. You can rearrange them freely, and each one stands on its own.
 
-Block-based editing sits above the waveform. When you need fine-grained control, the waveform is right there inside each block. But you start from structure and meaning, not from raw audio.
-
-For more, see [Welcome to Henshu](/getting-started/welcome#what-is-block-based-editing).
-
-## Sections, Blocks, and Pauses
-
-These are the building blocks of editing in Henshu.
-
-### Sections
-
-A **section** is a named container within an episode, for example "Intro," "Interview," or "Outro." Sections are the top-level building blocks of your episode. You can drag sections to reorder them, and each section can have its own [background music (BGM)](/editing/background-music) with independent volume, ducking, and fade settings.
-
-### Audio Blocks
+## Audio blocks
 
 An **audio block** lives inside a section and holds your actual audio content. This is where you edit: trimming, cutting, muting, and improving individual recordings. Audio blocks within a section play sequentially, one after another.
 
-### Pause Blocks
+When you upload a file, it gets placed into an audio block automatically. You can have multiple audio blocks in a single section.
 
-A **pause block** is a special type of block that inserts silence for a specified duration. Use pause blocks to control pacing and rhythm between audio blocks, like a pause between an intro and the main content.
+## Pause blocks
 
-## Editing Concepts
+A **pause block** inserts silence for a specified duration. Use pause blocks to control pacing and rhythm between audio blocks, like a pause between an intro and the main content.
 
-### Cuts and Mutes
+## How they fit together
 
-Also known as: edits, trims
+```
+Episode
+├── Section 1 ("Intro")
+│   ├── Audio Block (intro recording)
+│   └── Pause Block (2 seconds of silence)
+├── Section 2 ("Interview")
+│   └── Audio Block (interview recording)
+└── Section 3 ("Outro")
+    └── Audio Block (outro recording)
+```
 
-- A **cut** removes a portion of audio from playback. The audio before and after the cut plays without a gap.
-- A **mute** silences a portion of audio. The duration is preserved but the sound is replaced with silence.
-
-You can create cuts and mutes either by selecting regions on the [waveform editor](/editing/audio-editor) or by selecting text in the [transcript](/editing/transcripts).
-
-### Transcription
-
-Also known as: transcript
-
-**Transcription** is the process of converting your audio file into text using AI. Once transcribed, you can read your recording as text and make edits by selecting words. This is called [text-based editing](/editing/transcripts). Henshu uses AI-powered transcription with word-level timestamps so that text selections map precisely to audio regions.
-
-### Enhancement
-
-Also known as: audio cleanup, noise reduction, mastering
-
-**Enhancement** is Henshu's one-click [AI audio processing](/editing/ai-enhancement) that improves your recording quality. It includes noise reduction and volume leveling. Enhanced audio files are marked with a gold badge in the editor.
-
-## Music Concepts
-
-### BGM (Background Music)
-
-**BGM** stands for background music. Henshu provides a [music library](/editing/background-music) that you can browse and assign to individual sections of your episode. Each section can have its own BGM track with independent settings. Because BGM is per-section, your intro can have upbeat music while your interview has subtle ambient sound.
-
-### Ducking
-
-**Ducking** automatically lowers the background music volume when voice audio is playing, then brings it back up during pauses. This ensures your voice is always clearly audible over the music.
-
-### Smart Loop
-
-A **smart loop** is a BGM play mode that uses configured cue points to create music loops with crossfade transitions. Unlike a basic loop (which restarts from the beginning), a smart loop crossfades at natural transition points in the music for a more polished sound.
-
-BGM play modes:
-- **Once**: play the track once and stop
-- **Loop**: repeat from the beginning when the track ends
-- **Smart loop**: crossfade loop using configured cue points
-
-## Publishing Concepts
-
-### Generate (Episode Generation)
-
-Also known as: export, finalize, render
-
-**Generating** an episode is the process of assembling all your sections, audio blocks, BGM, and edits into a single final audio file. This is the last step before you download and publish your podcast. See [Generating Your Episode](/publishing/generating) for details.
-
-### Show Notes
-
-**Show notes** are the companion text for your episode: a summary, highlights, and timestamped chapters. Henshu can [generate show notes automatically](/publishing/show-notes) from your transcripts using AI. You can also add static sections like credits, guest profiles, and subscribe links using a customizable template that applies across all episodes in a show.
+Sections play in order from top to bottom. Within each section, blocks play sequentially. You can drag to reorder both sections and blocks.
 
 ## Related
 
-- [Welcome to Henshu](/getting-started/welcome): overview of block-based editing and the Henshu workflow
-- [Your First Episode](/getting-started/first-episode): walkthrough of the full workflow
-- [Plans & Quotas](/account/plans-and-quotas): upload, transcription, and show notes limits
+- [Welcome to Henshu](/getting-started/welcome): overview of block-based editing
+- [Using the Audio Editor](/editing/audio-editor): how to work with sections and blocks in the editor
+- [Adding Background Music](/editing/background-music): BGM is assigned per section
