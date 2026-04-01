@@ -42,7 +42,6 @@
           {
             "group": "Account",
             "pages": [
-              "account/setup",
               "account/plans-and-quotas",
               "account/subscription",
               "account/notifications"
