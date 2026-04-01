@@ -19,8 +19,8 @@ Use these terms consistently across all pages:
 | Show | A podcast series container | — | "project", "workspace" |
 | Episode | A single podcast episode within a show | — | "recording", "session" |
 | Section | A structural division of an episode (e.g., intro, interview, outro) | — | "chapter", "part" |
-| Audio block | A container for audio within a section. Types: AUDIO or BREAK | — | "clip", "track" |
-| Segment | A reference to a portion of an audio file within a block | — | "slice", "region" |
+| Audio block | A container for audio within a section | — | "clip", "track" |
+| Pause block | A block that inserts silence for a specified duration | pause, break block | "break" |
 | BGM | Background music assigned to a section. Spell out "background music" on first use, then "BGM" | background music | — |
 | Enhancement | AI-powered audio cleanup (noise reduction, leveling) | audio cleanup, noise reduction, mastering | — |
 | Transcription | AI-generated text transcript of an audio file | transcript | "caption", "subtitle" |
