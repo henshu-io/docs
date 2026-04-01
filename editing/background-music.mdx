@@ -49,7 +49,7 @@ Set the music volume relative to your voice audio:
 
 ### Ducking
 
-When **ducking** is enabled, the music volume automatically dips when voice audio is playing, then rises during pauses. Your voice stays clearly audible over the music without manual volume adjustments.
+When **ducking** is enabled, the music volume automatically lowers during audio blocks and rises back up during pause blocks. This keeps the music from competing with your voice.
 
 ### Fade In / Fade Out
 
@@ -90,7 +90,7 @@ Enable **ducking** to automatically lower the music when voice is playing. You c
 Check the **play mode** setting. If set to "Once," the music stops after one play. Switch to "Loop" or "Smart Loop" for continuous music throughout the section.
 
 **Ducking doesn't seem to be working**
-Ducking activates when voice audio is detected. If your section has mostly silence or very quiet speech, ducking may not trigger noticeably. Make sure ducking is toggled on in the BGM settings for that section.
+Ducking lowers the music volume during audio blocks and brings it back up during pause blocks. It doesn't analyze the audio content itself. Make sure ducking is toggled on in the BGM settings for that section.
 
 **I don't see any music in the library**
 You need to add tracks to your show's library first. Browse Henshu's collection or upload your own music, then assign them to sections.
