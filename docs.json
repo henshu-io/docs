@@ -9,48 +9,42 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "User Guide",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "getting-started/welcome",
-              "getting-started/concepts",
-              "getting-started/first-episode"
-            ]
-          },
-          {
-            "group": "Editing",
-            "pages": [
-              "creating/uploading-audio",
-              "editing/organizing",
-              "editing/editing-audio",
-              "editing/ai-enhancement",
-              "editing/background-music"
-            ]
-          },
-          {
-            "group": "Publishing",
-            "pages": [
-              "publishing/generating",
-              "publishing/show-notes",
-              "publishing/downloading"
-            ]
-          },
-          {
-            "group": "Account",
-            "pages": [
-              "account/plans-and-quotas",
-              "account/subscription",
-              "account/notifications"
-            ]
-          }
+        "group": "Getting Started",
+        "pages": [
+          "getting-started/welcome",
+          "getting-started/concepts",
+          "getting-started/first-episode"
+        ]
+      },
+      {
+        "group": "Editing",
+        "pages": [
+          "creating/uploading-audio",
+          "editing/organizing",
+          "editing/editing-audio",
+          "editing/ai-enhancement",
+          "editing/background-music"
+        ]
+      },
+      {
+        "group": "Publishing",
+        "pages": [
+          "publishing/generating",
+          "publishing/show-notes",
+          "publishing/downloading"
+        ]
+      },
+      {
+        "group": "Account",
+        "pages": [
+          "account/plans-and-quotas",
+          "account/subscription",
+          "account/notifications"
         ]
       }
-    ],
-    "global": {}
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
