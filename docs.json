@@ -25,8 +25,8 @@
             "group": "Editing",
             "pages": [
               "creating/uploading-audio",
-              "editing/audio-editor",
-              "editing/transcripts",
+              "editing/organizing",
+              "editing/editing-audio",
               "editing/ai-enhancement",
               "editing/background-music"
             ]
