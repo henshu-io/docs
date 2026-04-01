@@ -1,0 +1,92 @@
+---
+title: "Show Notes"
+description: "How to generate and customize show notes in Henshu — AI-generated summaries, highlights, and chapters, plus customizable templates with static sections."
+sidebarTitle: "Show Notes"
+keywords: ["show notes", "summary", "highlights", "chapters", "metadata", "AI", "generate", "template", "guest profile", "credits", "resources"]
+---
+
+# Show Notes
+
+Henshu can automatically generate show notes for your episode using AI — including a summary, key highlights, and timestamped chapters. You can also add static sections like credits, guest profiles, and subscribe links using a customizable template.
+
+## Overview
+
+Show notes are the companion text that accompanies your podcast episode — typically a summary, notable moments, and chapter markers for listeners to navigate. In Henshu, show notes are built from a **template** of components that you configure per show. Some components are **AI-generated** from your transcripts, while others are **static** sections you write once and reuse across episodes.
+
+## How do I generate show notes?
+
+1. Make sure your audio files are [transcribed](/editing/transcripts) — show notes generation uses your transcripts as input
+2. Open the **Publish** panel in the episode editor
+3. Click **Generate** to create AI-powered content for your enabled dynamic components
+4. Review and edit the generated content as needed
+
+[screenshot: Publish panel showing generated show notes with summary, highlights, and chapters]
+
+Generation uses the majority language detected from your transcripts automatically.
+
+## What gets generated?
+
+Three component types are AI-generated from your transcripts:
+
+| Component | What it produces |
+|-----------|-----------------|
+| **Summary** | A concise overview of the episode's content |
+| **Highlights** | Key moments and notable points from the conversation |
+| **Chapters** | Timestamped chapter markers that listeners can use to navigate the episode |
+
+You can regenerate individual components if you want a fresh version, and undo a regeneration if you preferred the previous output.
+
+## How do I customize the show notes template?
+
+Each show has a **notes template** that controls which sections appear and in what order. The default template includes Summary, Highlights, and Chapters, but you can add more:
+
+**Static sections** (written once per show, reused across episodes):
+- **Host Profile** — about the host
+- **Credits** — production credits
+- **Disclaimer** — legal or content disclaimers
+- **Subscribe Links** — where listeners can follow the podcast
+
+**Per-episode sections** (unique content for each episode):
+- **Guest Profile** — about the episode's guest
+- **Resources** — links and references mentioned in the episode
+- **Custom** — any custom section you define (can be added multiple times)
+
+To customize your template, add or remove components and drag to reorder them. The template is saved at the show level, so it applies to all episodes in that show.
+
+## How do I edit generated content?
+
+After generation, all content is editable:
+
+- Click on a summary, highlight, or chapter to edit it inline
+- Changes are saved to the episode — they won't be overwritten unless you explicitly regenerate
+- You can copy the full show notes or just the chapters to paste into your podcast host
+
+## Key Details
+
+- Show notes require transcribed audio files — generate transcriptions before generating show notes
+- AI-generated components (summary, highlights, chapters) are generated from transcript content
+- Static sections (credits, disclaimer, subscribe links, host profile) are configured once at the show level and shared across episodes
+- Per-episode sections (guest profile, resources, custom) are unique to each episode
+- Generated content can be edited after generation without affecting future generations
+- Show notes generation has a usage quota on the Free plan — see [Plans & Quotas](/account/plans-and-quotas) for details
+
+## Common Issues
+
+**"Transcription required" message when trying to generate**
+All audio files in the episode need to be transcribed before show notes can be generated. Go to each audio file and click **Transcribe**, then return to the Publish panel.
+
+**Generation is taking a long time**
+Longer episodes with more transcript content take more time to process. Generation typically completes within a minute.
+
+**I want to undo a regeneration**
+After regenerating a component, an undo option appears briefly. Click it to restore the previous version.
+
+**Chapters have wrong timestamps**
+Chapter timestamps are derived from your transcript's word-level timing. If timestamps seem off, the underlying transcript timing may be imprecise for that section of audio.
+
+## Related
+
+- [Editing with Transcripts](/editing/transcripts) — transcription is required before generating show notes
+- [Generating Your Episode](/publishing/generating) — assemble the final audio file
+- [Plans & Quotas](/account/plans-and-quotas) — show notes generation quota
+- [Concepts & Terminology](/getting-started/concepts) — key terms
