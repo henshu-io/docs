@@ -2,22 +2,18 @@
 title: "Uploading Audio"
 description: "How to upload audio files to your Henshu episode, including supported formats, the upload process, and what happens after upload."
 sidebarTitle: "Uploading Audio"
-keywords: ["upload", "audio", "recording", "file", "drag and drop", "format", "wav", "mp3", "processing", "waveform", "quota"]
+keywords: ["upload", "audio", "recording", "file", "drag and drop", "format", "wav", "mp3", "processing", "quota"]
 ---
 
-Upload your audio recordings to an episode to start editing. Henshu processes uploaded files automatically, converting them to a standard format and generating a waveform for visual editing.
-
-## Overview
-
-You upload audio files from within the episode editor. Files can be added via drag-and-drop or a file picker. After upload, Henshu processes each file in the background: it converts the audio to a standard format (for consistent editing) and generates a waveform visualization.
+Upload your audio recordings to an episode to start editing. Henshu processes uploaded files automatically after upload.
 
 ## How do I upload audio?
 
 1. Open an episode in the editor
 2. Either **drag and drop** audio files into the editor, or click the **Upload** button and select files from your computer
 3. Your files begin uploading, and you'll see a progress indicator
-4. Once uploaded, Henshu processes each file (this takes a few seconds)
-5. A waveform appears when processing is complete, and the file is ready to edit
+4. Once uploaded, the audio file card shows **Processing...**
+5. When processing finishes, the file is ready to edit
 
 [screenshot: Upload area in the editor with drag-and-drop zone]
 
@@ -25,14 +21,13 @@ You can upload multiple files at once. Large files are automatically handled wit
 
 ## What happens after upload?
 
-When you upload a file, Henshu:
+After you upload a file, you'll see a series of status indicators on the audio file card:
 
-1. Uploads the file to cloud storage
-2. Converts it to a standard audio format (48kHz, mono) for consistent editing
-3. Generates a waveform so you can see the audio visually in the editor
-4. Creates an audio block containing your file in the current section
+1. **Processing...** converts the file to a standard audio format for consistent editing. You need to wait for this to finish before editing.
+2. **Enhancing...** runs the [AI enhancement pipeline](/editing/ai-enhancement) (noise reduction, mouth noise removal, tone optimization, volume leveling). You can start editing while this runs.
+3. **Transcribing...** generates a [transcript](/editing/transcripts) of the audio. You can start editing while this runs.
 
-You can start editing as soon as the waveform appears.
+Enhancement and transcription happen in the background. You don't need to wait for them to finish before arranging blocks, making cuts, or doing other edits.
 
 ## Supported formats
 
@@ -59,10 +54,11 @@ You've reached your plan's upload limit. See [Plans & Quotas](/account/plans-and
 **My file format isn't accepted**
 Make sure your file is a supported audio format (WAV, MP3, M4A, AAC, FLAC, OGG). Video files and non-audio formats are not supported.
 
-**Waveform isn't appearing after upload**
-Processing can take a few seconds depending on file size. If the waveform doesn't appear after a minute, try refreshing the page. Your file is safely stored and processing will continue.
+**The file still says "Processing..."**
+Processing can take a few seconds depending on file size. If it doesn't finish after a minute, try refreshing the page. Your file is safely stored and processing will continue.
 
 ## Related
 
 - [Using the Audio Editor](/editing/audio-editor): edit your uploaded audio
+- [AI Audio Enhancement](/editing/ai-enhancement): what the enhancement step does
 - [Plans & Quotas](/account/plans-and-quotas): upload limits for your plan
