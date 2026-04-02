@@ -22,7 +22,7 @@
       {
         "group": "Editing",
         "pages": [
-          "creating/uploading-audio",
+          "editing/uploading-audio",
           "editing/organizing",
           "editing/editing-audio",
           "editing/ai-enhancement",
