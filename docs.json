@@ -50,7 +50,7 @@
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg",
-    "height": 14
+    "height": 20
   },
   "navbar": {
     "links": [
